@@ -69,6 +69,19 @@ namespace BandTracker.Models
       return allVenues;
     }
 
+    public override bool Equals(System.Object otherThing)
+    {
+      if (!(otherThing is Venue))
+      {
+        return false;
+      }
+      else
+      {
+        Venue newVenue = (Venue) otherThing;
+        return this.GetId().Equals(newVenue.GetId());
+      }
+    }
+
     public void Save()
     {
       MySqlConnection conn = DB.Connection();
