@@ -133,5 +133,40 @@ namespace BandTracker.Models
       }
       return allBandVenues;
     }
+
+    public static Band Find(int id)
+    {
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+
+      var cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText =@"SELECT * from `bands` WHERE id = @thisId;";
+
+      MySqlParameter thisId = new MySqlParameter();
+      thisId.ParameterName = "@thisId";
+      thisId.Value = id;
+      cmd.Parameters.Add(thisId);
+
+      var rdr = cmd.ExecuteReader() as MySqlDataReader;
+      int bandId = 0;
+      string bandName = "";
+      string bandDescription = "";
+
+      while(rdr.Read())
+      {
+        bandId = rdr.GetInt32(0);
+        bandName = rdr.GetString(1);
+        bandDescription = rdr.GetString(2);
+      }
+
+      Band foundBand = new Band(bandName, bandDescription, bandId);
+
+      conn.Close();
+      if(conn != null)
+      {
+        conn.Dispose();
+      }
+      return foundBand;
+    }
   }
 }

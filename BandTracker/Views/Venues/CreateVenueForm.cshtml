@@ -1,0 +1,13 @@
+<h1>Band Tracker</h1>
+<h3>Add a venue @Model.GetBandName() has played at:</h3>
+<form action="/bands/@Model.GetId()/venues" method="post">
+  <div class="form-group">
+    <label for="venue-name">Name of the venue:</label>
+    <input type="text" id="venue-name" name="venue-name" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="venue-address">Address: </label>
+    <input type="text" id="venue-address" name="venue-address" class="form-control" required>
+  </div>
+  <button type="submit" class="btn btn-warning" name="button">Add Venue</button>
+</form>
