@@ -12,5 +12,11 @@ namespace BandTracker.Controllers
       List<Band> allBands = Band.GetAll();
       return View("Index", allBands);
     }
+
+    [HttpGet("/bands/new")]
+    public ActionResult CreateBandForm()
+    {
+      return View();
+    }
   }
 }
