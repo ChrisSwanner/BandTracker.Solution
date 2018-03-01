@@ -1,0 +1,14 @@
+C:\Users\chris\desktop\BandTracker\BandTracker.Test\bin\Debug\netcoreapp1.1\BandTrackerTest.deps.json
+C:\Users\chris\desktop\BandTracker\BandTracker.Test\bin\Debug\netcoreapp1.1\BandTrackerTest.runtimeconfig.json
+C:\Users\chris\desktop\BandTracker\BandTracker.Test\bin\Debug\netcoreapp1.1\BandTrackerTest.runtimeconfig.dev.json
+C:\Users\chris\desktop\BandTracker\BandTracker.Test\obj\Debug\netcoreapp1.1\BandTrackerTest.csproj.CoreCompileInputs.cache
+C:\Users\chris\desktop\BandTracker\BandTracker.Test\obj\Debug\netcoreapp1.1\BandTrackerTest.AssemblyInfo.cs
+C:\Users\chris\desktop\BandTracker\BandTracker.Test\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\chris\desktop\BandTracker\BandTracker.Test\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\chris\desktop\BandTracker\BandTracker.Test\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\chris\desktop\BandTracker\BandTracker.Test\bin\Debug\netcoreapp1.1\BandTrackerTest.dll
+C:\Users\chris\desktop\BandTracker\BandTracker.Test\bin\Debug\netcoreapp1.1\BandTrackerTest.pdb
+C:\Users\chris\desktop\BandTracker\BandTracker.Test\bin\Debug\netcoreapp1.1\BandTracker.dll
+C:\Users\chris\desktop\BandTracker\BandTracker.Test\bin\Debug\netcoreapp1.1\BandTracker.pdb
+C:\Users\chris\desktop\BandTracker\BandTracker.Test\obj\Debug\netcoreapp1.1\BandTrackerTest.dll
+C:\Users\chris\desktop\BandTracker\BandTracker.Test\obj\Debug\netcoreapp1.1\BandTrackerTest.pdb

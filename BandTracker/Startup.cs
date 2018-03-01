@@ -8,7 +8,7 @@ namespace BandTracker
 {
   public static class DBConfiguration
   {
-    public static string ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=bandTracker;";
+    public static string ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=chris_swanner;";
   }
   public class Startup
   {
