@@ -21,17 +21,18 @@ namespace BandTracker.TestTools
 
     }
 
-    // [TestMethod]
-    // public void Delete_ReturnCorrect_View()
-    // {
-    //   VenuesController controller = new VenuesController();
-    //
-    //   IActionResult deleteView = controller.Index();
-    //   ViewResult result = deleteView as ViewResult;
-    //
-    //   Assert.IsInstanceOfType(result, typeof(ViewResult));
-    //
-    // }
+    [TestMethod]
+    public void Delete_ReturnCorrect_View()
+    {
+      BandsController controller = new BandsController();
+
+      IActionResult deleteView = controller.Index();
+
+      ViewResult result = deleteView as ViewResult;
+
+      Assert.IsInstanceOfType(result, typeof(ViewResult));
+
+    }
   }
 
 }
