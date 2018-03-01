@@ -26,15 +26,6 @@ namespace BandTracker.Controllers
       return View();
     }
 
-    [HttpPost("/venues/{id}/update")]
-    public ActionResult UpdateForm(int id)
-    {
-      Venue thisVenue = Venue.Find(id);
-      return View(thisItem);
-    }
-
-
-
   }
 
 }

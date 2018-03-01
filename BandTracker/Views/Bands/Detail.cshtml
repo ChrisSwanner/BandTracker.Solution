@@ -1,8 +1,15 @@
+@{
+  Layout = "_Layout";
+}
 <h1>@Model["band"].GetBandName()</h1>
 <h2>Venues @Model["band"].GetBandName() has played at: </h2>
 @foreach (var venue in @Model["venues"])
 {
   <p>@venue.GetName() | Address: @venue.GetAddress()</p>
 }
+
+
 <p><a href='/bands/@Model["band"].GetId()/venues/new'>Add a venue @Model["band"].GetBandName() has played at</a></p>
+<hr>
+<p><a href="/bands/@Model["band"].GetId()/delete">Delete This Band</p>
 <p><a href="/">Return Home</a></p>

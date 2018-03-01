@@ -102,5 +102,60 @@ namespace BandTracker.Models
         conn.Dispose();
       }
     }
+
+    public static void DeleteAll()
+    {
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+
+      var cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = @"DELETE FROM categories;";
+
+      cmd.ExecuteNonQuery();
+
+      conn.Close();
+      if(conn != null)
+      {
+        conn.Dispose();
+      }
+    }
+
+    
+    // public static Venue Find(int id)
+    // {
+    //   MySqlConnection conn = DB.Connection();
+    //   conn.Open();
+    //
+    //   var cmd = conn.CreateCommand() as MySqlCommand;
+    //   cmd.CommandText = @"SELECT * FROM `venues` WHERE id = @thisId;";
+    //
+    //   MySqlParameter thisId = new MySqlParameter();
+    //   thisId.ParameterName = "@thisId";
+    //   thisId.Value = id;
+    //   cmd.Parameters.Add(thisId);
+    //
+    //   var rdr = cmd.ExecuteReader() as MySqlDataReader;
+    //   int venueId = 0;
+    //   string venueName = "";
+    //   string venueAddress = "";
+    //   int venueBandId = 0;
+    //
+    //   while (rdr.Read())
+    //   {
+    //     venueId = rdr.GetInt32(0);
+    //     venueName = rdr.GetString(1);
+    //     venueAddress = rdr.GetString(2);
+    //     venueBandId = rdr.GetInt32(3);
+    //   }
+    //
+    //   Venue foundVenue = new Venue(venueName, venueAddress, venueId, venueBandId);
+    //
+    //   conn.Close();
+    //   if (conn != null)
+    //   {
+    //     conn.Dispose();
+    //   }
+    //   return foundVenue;
+    // }
   }
 }

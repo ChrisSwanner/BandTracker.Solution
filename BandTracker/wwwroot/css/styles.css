@@ -1,0 +1,16 @@
+body {
+  background-color: brown;
+  color: yellow;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: yellow;
+}
+
+h1 {
+  text-align: center;
+}

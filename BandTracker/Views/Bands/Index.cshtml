@@ -1,9 +1,14 @@
+@{
+  Layout = "_Layout";
+}
 <h1>Band Tracker</h1>
 @foreach (var band in Model)
 {
   <h2>@band.GetBandName() | <a href="bands/@band.GetId()">View Band Info</a> </h2>
   <br>
-  <h2><a href="/venues">View All Venues<a/></h2>
+  <h3><a href="/bands/new">Add New Band</a></h3>
+
 
 }
-<a href="/bands/new">Add New Band</a>
+<hr>
+<h4><a href="/venues">View All Venues<a/></h4>

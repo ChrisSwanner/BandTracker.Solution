@@ -51,5 +51,13 @@ namespace BandTracker.Controllers
       model.Add("band", foundBand);
       return RedirectToAction("Detail", model);
     }
+
+    [HttpGet("/bands/{id}/delete")]
+    public ActionResult Delete(int id)
+    {
+      Band thisBand = Band.Find(id);
+      thisBand.Delete();
+      return RedirectToAction("Index");
+    }
   }
 }
