@@ -26,10 +26,11 @@ namespace Bandtracker.Tests
       Band testBand = new Band("The cool band", "this band is cool");
       testBand.Save();
 
+
       List<Band> Result = Band.GetAll();
       List<Band> testList = new List<Band>{testBand};
 
-      Assert.AreEqual(testBand, Result);
+      Collections.Assert.AreEqual(testBand, Result);
     }
   }
 }
