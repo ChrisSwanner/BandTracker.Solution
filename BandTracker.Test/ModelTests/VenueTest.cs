@@ -13,16 +13,16 @@ namespace Bandtracker.TestTools
         {
         }
 
-    // [TestMethod]
-    // public void GetNameOfVenue_FetchName_String()
-    // {
-    //   string venueName = "Venue";
-    //   Venue newVenue = new Venue("Venue", "Address");
-    //
-    //   string result = newVenue.GetName();
-    //
-    //   Assert.AreEqual(result, venueName);
-    // }
+    [TestMethod]
+    public void GetNameOfVenue_FetchName_String()
+    {
+      string venueName = "Venue";
+      Venue newVenue = new Venue("Venue", "Address");
+
+      string result = newVenue.GetName();
+
+      Assert.AreEqual(result, venueName);
+    }
 
     [TestMethod]
     public void Save_SaveVenue_ItemList()
