@@ -19,5 +19,17 @@ namespace Bandtracker.Tests
 
       Assert.AreEqual(0, result);
     }
+
+    [TestMethod]
+    public void Save_SaveABandToTheDatabase_BandList()
+    {
+      Band testBand = new Band("The cool band", "this band is cool");
+      testBand.Save();
+
+      List<Band> Result = Band.GetAll();
+      List<Band> testList = new List<Band>{testBand};
+
+      Assert.AreEqual(testBand, Result);
+    }
   }
 }
