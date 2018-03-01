@@ -26,6 +26,13 @@ namespace BandTracker.Controllers
       return View();
     }
 
+    [HttpGet("/venues/deleteAll")]
+    public ActionResult DeleteAll()
+    {
+      Venue.DeleteAll();
+      return RedirectToAction("Index", "Bands");
+    }
+
   }
 
 }

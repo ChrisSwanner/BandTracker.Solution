@@ -109,18 +109,18 @@ namespace BandTracker.Models
       conn.Open();
 
       var cmd = conn.CreateCommand() as MySqlCommand;
-      cmd.CommandText = @"DELETE FROM categories;";
+      cmd.CommandText = @"DELETE FROM venues;";
 
       cmd.ExecuteNonQuery();
 
       conn.Close();
-      if(conn != null)
+      if (conn != null)
       {
         conn.Dispose();
       }
     }
 
-    
+
     // public static Venue Find(int id)
     // {
     //   MySqlConnection conn = DB.Connection();

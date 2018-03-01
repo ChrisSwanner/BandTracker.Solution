@@ -59,5 +59,12 @@ namespace BandTracker.Controllers
       thisBand.Delete();
       return RedirectToAction("Index");
     }
+
+    [HttpGet("/bands/deleteAll")]
+    public ActionResult DeleteAll()
+    {;
+      Band.DeleteAll();
+      return RedirectToAction("Index");
+    }
   }
 }
