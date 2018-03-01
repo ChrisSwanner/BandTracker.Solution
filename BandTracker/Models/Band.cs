@@ -14,6 +14,7 @@ namespace BandTracker.Models
     public Band(string bandName, string bandDescription, int Id = 0)
     {
       _bandName = bandName;
+      _bandDescription = bandDescription;
       _id = Id;
     }
 
@@ -74,7 +75,7 @@ namespace BandTracker.Models
       conn.Open();
 
       var cmd = conn.CreateCommand() as MySqlCommand;
-      cmd.CommandText = @"INSERT INTO `bands` (`bandName`, `bandDescription`, bandId) VALUES (@BandName, @BandDescription, @BandId);";
+      cmd.CommandText = @"INSERT INTO `bands` (`name`, `description`, id) VALUES (@BandName, @BandDescription, @BandId);";
 
       MySqlParameter bandName = new MySqlParameter();
       bandName.ParameterName = "@BandName";

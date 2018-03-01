@@ -23,14 +23,15 @@ namespace Bandtracker.Tests
     [TestMethod]
     public void Save_SaveABandToTheDatabase_BandList()
     {
-      Band testBand = new Band("The cool band", "this band is cool");
+      Band testBand = new Band("The cool band", "");
       testBand.Save();
 
 
-      List<Band> Result = Band.GetAll();
+      List<Band> result = Band.GetAll();
+      System.Console.WriteLine(result);
       List<Band> testList = new List<Band>{testBand};
 
-      Collections.Assert.AreEqual(testBand, Result);
+      CollectionAssert.AreEqual(testList, result);
     }
   }
 }

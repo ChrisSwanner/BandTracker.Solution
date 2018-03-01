@@ -49,7 +49,7 @@ namespace BandTracker.Models
       List<Venue> allVenues = new List<Venue> {};
       MySqlConnection conn = DB.Connection();
       conn.Open();
-      MySqlCommand cmd conn.CreateCommand() as MySqlCommand;
+      MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
       cmd.CommandText = @"SELECT * FROM venues;";
       MySqlDataReader rdr = cmd.ExecuteReader() as MySqlDataReader;
       while(rdr.Read())
